@@ -1,0 +1,145 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Dark-cyan-hover: hsl(156, 60%, 25%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: var(--Dark-grayish-blue);
+    background-color: var(--Cream);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 1rem;
+}
+
+.split {
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 37.5rem;
+    background-color: white;
+    display: flex;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.image {
+    /* flex: 1 1 4rem; */
+    flex: 1;
+}
+
+.image img {
+    display: block;
+    max-width: 18.75rem;
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    flex: 1;
+    padding: 2rem;
+    max-width: 18.75rem;
+}
+
+.product {
+    letter-spacing: 5px;
+    font-size: 0.75rem;
+}
+
+.product-name {
+    font-family: 'Fraunces', serif;
+    font-size: 1.875rem;
+    color: var(--Very-dark-blue);
+    line-height: 1;
+}
+
+.product-description {
+    line-height: 1.6;
+    font-size: 0.875rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.new-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.875rem;
+    color: var(--Dark-cyan);
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.btn {
+    background-color: var(--Dark-cyan);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: .5rem;
+    width: 100%;
+    padding: 0.875rem;
+    transition: background-color 200ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--Dark-cyan-hover);
+    cursor: pointer;
+}
+
+@media (max-width : 670px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .image img {
+        content: url('images/image-product-mobile.jpg');
+        max-width: 100%;
+    }
+
+    .info {
+        max-width: 100%;
+    }
+
+
+}
